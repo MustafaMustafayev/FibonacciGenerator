@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <CodeAnalysisRuleSet>../settings.ruleset</CodeAnalysisRuleSet>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="StyleCop.Analyzers" />
+    <None Remove="CustomMiddlewares\" />
+    <None Remove="CustomFilters\" />
+    <None Remove="Extensions\" />
+    <None Remove="Microsoft.AspNetCore.Diagnostics" />
+    <None Remove="Constants\" />
+    <None Remove="Abstract\" />
+    <None Remove="Concrete\" />
+    <None Remove="Helper\" />
+    <None Remove="Microsoft.Extensions.Caching.Memory" />
+    <None Remove="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CustomMiddlewares\" />
+    <Folder Include="CustomFilters\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterviewTask.DTO\InterviewTask.DTO.csproj" />
+  </ItemGroup>
+</Project>
